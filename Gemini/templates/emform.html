@@ -1,18 +1,20 @@
+
+
+
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
-
 
 {% block content %}
 <form action="" method="post" autocomplete="off">
     {% csrf_token %}
-    {{form.fullname|as_crispy_field}}
-    {{form.mobile|as_crispy_field}}
+    {{ form.fullname }}
+    {{ form.mobile }}
     <div class="row">
         <div class="col-md-4">
-            {{form.empcode|as_crispy_field}}
+            {{ form.empcode }}
         </div>
         <div class="col-md-8">
-            {{form.pos|as_crispy_field}}
+            {{ form.pos }}
         </div>
     </div>
     <div class="row">
@@ -26,6 +28,5 @@
             </a>
         </div>
     </div>
-
 </form>
 {% endblock content %}
